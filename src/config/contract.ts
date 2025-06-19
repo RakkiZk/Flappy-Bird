@@ -404,4 +404,9 @@ export const GAME_REWARD_ABI = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-]; 
+];
+
+export const config = {
+    GAME_REWARD_ADDRESS,
+    GAME_REWARD_ABI
+};

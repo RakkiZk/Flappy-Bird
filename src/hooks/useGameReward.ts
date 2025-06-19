@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useContractRead, useContractWrite, useAccount } from 'wagmi';
 import { ethers } from 'ethers';
+import { BrowserProvider } from "ethers";
 import { GAME_REWARD_ADDRESS, GAME_REWARD_ABI } from '../config/contract';
 
 export function useGameReward() {
@@ -49,12 +50,12 @@ export function useGameReward() {
         throw new Error('Contract write function not available or wallet not connected');
       }
 
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const provider = new BrowserProvider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(
         GAME_REWARD_ADDRESS,
         GAME_REWARD_ABI,
-        signer
+        await signer
       );
 
       const tx = await contract.redeemPoints(amount);

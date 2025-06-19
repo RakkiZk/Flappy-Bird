@@ -16,9 +16,12 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.80.7",
+    "@testing-library/jest-dom": "^6.6.3",
     "@types/lodash": "^4.17.16",
     "@types/node": "20.11.24",
+    "@wagmi/core": "2.17.3",
     "chart.js": "4.4.2",
+    "ethers": "6.14.4",
     "framer-motion": "11.0.8",
     "lodash": "^4.17.21",
     "lucide-react": "0.344.0",
@@ -26,10 +29,8 @@
     "react-chartjs-2": "5.2.0",
     "react-dom": "18.3.1",
     "react-error-boundary": "4.0.12",
-    "zustand": "4.5.1",
     "wagmi": "2.15.6",
-     "ethers": "6.14.4",
-    "@wagmi/core": "2.17.3"
+    "zustand": "4.5.1"
   },
   "devDependencies": {
     "@testing-library/react": "14.2.1",

@@ -1,10 +1,13 @@
-import { http } from 'wagmi'
-import { fuse } from 'wagmi/chains'
-import { createConfig } from 'wagmi'
+import { http, createConfig } from 'wagmi'
+import { metaMask } from 'wagmi/connectors'
+import { bscTestnet } from 'wagmi/chains'
 
 export const config = createConfig({
-  chains: [fuse],
+  chains: [bscTestnet],
+  connectors: [
+    metaMask()
+  ],
   transports: {
-    [fuse.id]: http(),
+    [bscTestnet.id]: http('https://data-seed-prebsc-1-s1.binance.org:8545/')
   },
-}) 
+})
